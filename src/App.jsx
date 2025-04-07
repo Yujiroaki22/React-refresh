@@ -1,8 +1,14 @@
-import { useState } from "react";
-import customText from "./components/customText";
+import { useEffect, useState } from "react";
 import CustomText from "./components/customText";
 function App() {
-  const[text,setText]=useState("hello")
+
+  
+  const[text,setText]=useState("hello");
+  useEffect(
+    () => {
+      console.log("Hello Hello");
+    }, []
+  );
   const inputHandler= (e) =>{
     setText(e.target.value);
   }
